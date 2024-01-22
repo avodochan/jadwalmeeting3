@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('absensi', function (Blueprint $table) {
             $table->id('id_absensi');
-            $table->enum('absen', ['hadir', 'sakit', 'izin', 'alfa']);
+            $table->enum('absen', ['hadir', 'sakit', 'izin', 'alfa'])->default('hadir');
             $table->timestamps();
         });
     }
