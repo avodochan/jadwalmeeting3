@@ -15,4 +15,8 @@ class UserhomeController extends Controller
     {
         return view('jadwalRapat');
     }
+    public function userHome()
+    {
+        return view('userHome');
+    }
 }
