@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserhomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +24,8 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('userHome');
 });
+
+Route::get('/jadwalRapat', [App\Http\Controllers\UserhomeController::class, 'jadwalRapat'])->name('jadwalRapat');
 
 Auth::routes();
 

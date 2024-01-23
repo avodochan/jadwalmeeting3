@@ -4,12 +4,13 @@
       <img src="assets/img/hero-carousel/hero-carousel-3.svg" class="img-fluid animated">
       <h2>Welcome to <span>HeroBiz</span></h2>
       <p>Et voluptate esse accusantium accusamus natus reiciendis quidem voluptates similique aut.</p>
-      <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-      </div>
+        {{-- <div class="d-flex">
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+        </div> --}}
     </div>
   </section>
+  
 
   <main id="main">
 
@@ -62,7 +63,7 @@
 
         <div class="section-header">
           <h2>About Us</h2>
-          <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+          <p>An application that functions to organize and view your meeting schedule. With several features created for you to see the latest meeting schedule.</p>
         </div>
 
         <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">

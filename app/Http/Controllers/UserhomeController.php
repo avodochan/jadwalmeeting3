@@ -10,4 +10,9 @@ class UserhomeController extends Controller
     {
         return view('userHome');
     }
+
+    public function jadwalRapat()
+    {
+        return view('jadwalRapat');
+    }
 }

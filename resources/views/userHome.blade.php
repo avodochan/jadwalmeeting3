@@ -2,17 +2,292 @@
 
 @section('content')
 
-<section id="hero-animated" class="hero-animated d-flex align-items-center">
+{{-- <section id="hero-animated" class="hero-animated d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
       <img src="assets/img/hero-carousel/hero-carousel-3.svg" class="img-fluid animated">
       <h2>Welcome to <span>Meet Up</span></h2>
       <p>An application that functions to organize and view your meeting schedule. With several features created for you to see the latest meeting schedule.</p>
-      <div class="d-flex">
+      {{-- <div class="d-flex">
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
         <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-      </div>
+      </div> --}}
+    {{-- </div> --}}
+  {{-- </section> --}} 
+  <section id="hero" class="hero carousel  carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row justify-content-center gy-6">
+
+            <div class="col-lg-5 col-md-8">
+              <img src="assets/img/hero-carousel/hero-carousel-1.svg" alt="" class="img-fluid img">
+            </div>
+
+            <div class="col-lg-9 text-center">
+              <h2>Welcome to Meet Up</h2>
+              {{--  <p>An application that functions to organize and view your meeting schedule. With several features created for you to see the latest meeting schedule.</p> --}}
+              <a href="#featured-services" class="btn-get-started scrollto ">Get Started</a>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- End Carousel Item -->
     </div>
-  </section>
+
+      {{-- <div class="carousel-item">
+        <div class="container">
+          <div class="row justify-content-center gy-6">
+
+            <div class="col-lg-5 col-md-8">
+              <img src="assets/img/hero-carousel/hero-carousel-2.svg" alt="" class="img-fluid img">
+            </div>
+
+            <div class="col-lg-9 text-center">
+              <h2>At vero eos et accusamus</h2>
+              <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
+              <a href="#featured-services" class="btn-get-started scrollto ">Get Started</a>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- End Carousel Item -->
+
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row justify-content-center gy-6">
+
+            <div class="col-lg-5 col-md-8">
+              <img src="assets/img/hero-carousel/hero-carousel-3.svg" alt="" class="img-fluid img">
+            </div>
+
+            <div class="col-lg-9 text-center">
+              <h2>Temporibus autem quibusdam</h2>
+              <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
+              <a href="#featured-services" class="btn-get-started scrollto ">Get Started</a>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- End Carousel Item -->
+    </div> --}}
+
+
+ <!-- ======= Services Section ======= -->
+ <section id="services" class="services">
+    <div class="container" data-aos="fade-up">
+
+      {{-- <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Ea vitae aspernatur deserunt voluptatem impedit deserunt magnam occaecati dssumenda quas ut ad dolores adipisci aliquam.</p>
+      </div> --}}
+
+      <div class="row gy-5">
+
+        <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="service-item">
+            <div class="img">
+              <img src="assets/img/services-1.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="details position-relative">
+              <div class="icon">
+                <i class="bi bi-activity"></i>
+              </div>
+              <a href="jadwalRapat" class="stretched-link">
+                <h3>Jadwal rapat</h3>
+              </a>
+              <p>Fitur yang menampilkan beberapa jadwal rapat terkini.</p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item">
+            <div class="img">
+              <img src="assets/img/services-2.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="details position-relative">
+              <div class="icon">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Buat Rapat</h3>
+              </a>
+              <p>Buat jadwal rapat anda disini. </p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+          <div class="service-item">
+            <div class="img">
+              <img src="assets/img/services-6.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="details position-relative">
+              <div class="icon">
+                <i class="bi bi-easel"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Arsip Rapat</h3>
+              </a>
+              <p>Fitur yang menampilkan arsipan dari rapat</p>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+{{-- 
+        <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+          <div class="service-item">
+            <div class="img">
+              <img src="assets/img/services-4.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="details position-relative">
+              <div class="icon">
+                <i class="bi bi-bounding-box-circles"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Asperiores Commodit</h3>
+              </a>
+              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+          <div class="service-item">
+            <div class="img">
+              <img src="assets/img/services-5.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="details position-relative">
+              <div class="icon">
+                <i class="bi bi-calendar4-week"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Velit Doloremque</h3>
+              </a>
+              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
+          <div class="service-item">
+            <div class="img">
+              <img src="assets/img/services-6.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="details position-relative">
+              <div class="icon">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Dolori Architecto</h3>
+              </a>
+              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div> --}}
+        </div><!-- End Service Item -->
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+  <!-- ======= Testimonials Section ======= -->
+  <section id="testimonials" class="testimonials">
+    <div class="container" data-aos="fade-up">
+
+      <div class="testimonials-slider swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section><!-- End Testimonials Section -->
+
   <main id="main">
     <!-- ======= Featured Services Section ======= -->
     <section id="featured-services" class="featured-services">
@@ -63,7 +338,7 @@
 
         <div class="section-header">
           <h2>About Us</h2>
-          <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+          <p>An application that functions to organize and view your meeting schedule. With several features created for you to see the latest meeting schedule.</p>
         </div>
 
         <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">

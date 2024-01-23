@@ -1,8 +1,8 @@
 <body>
 
-    @include('layouts.navbar')
+    {{-- @include('layouts.navbar') --}}
     
-    @include('layouts.content')
+    {{-- @include('layouts.content') --}}
     
       <!-- ======= Footer ======= -->
       <footer id="footer" class="footer">
