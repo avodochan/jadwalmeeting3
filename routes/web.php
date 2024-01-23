@@ -26,6 +26,7 @@ Route::get('/', function () {
 });
 
 Route::get('/jadwalRapat', [App\Http\Controllers\UserhomeController::class, 'jadwalRapat'])->name('jadwalRapat');
+Route::get('/buatRapat', [App\Http\Controllers\UserhomeController::class, 'buatRapat'])->name('buatRapat');
 
 Auth::routes();
 
