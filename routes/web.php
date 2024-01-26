@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RoomnameController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,22 @@ Route::get('/', function () {return view('welcome');});
 Route::get('/adminindex', function () {return view('adminindex');});
 Route::get('/admininputdata', function () {return view('admininputdata');});
 Route::get('/adminshowdata', function () {return view('adminshowdata');});
+
+
+// returns the home page with all posts
+Route::get('/roomname', RoomnameController::class .'@index')->name('roomnames.index');
+// returns the form for adding a post
+Route::get('/roomname/create', RoomnameController::class . '@create')->name('roomnames.create');
+// adds a post to the database
+Route::post('/roomname', RoomnameController::class .'@store')->name('roomnames.store');
+// returns a page that shows a full post
+Route::get('/roomname/{id}', RoomnameController::class .'@show')->name('roomnames.show');
+// returns the form for editing a post
+Route::get('/roomname/{id}/edit', RoomnameController::class .'@edit')->name('roomnames.edit');
+// updates a post
+Route::put('/roomname/{id}', RoomnameController::class .'@update')->name('roomnames.update');
+// deletes a post
+Route::get('/roomname/hapus/{id}', RoomnameController::class .'@delete')->name('roomnames.delete');
 
 
 

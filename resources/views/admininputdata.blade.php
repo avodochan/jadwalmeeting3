@@ -73,11 +73,14 @@
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h6 class="mb-0">Add New Meeting Room (Offline Model Only)</h6>
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" placeholder ="">
-                                <label for="floatingInput">Input Room Name</label>
-                            </div>
-                            <button class="btn btn-outline-primary w-100 m-2" type="button">Submit</button>
+                            <form action="/roomname" method="POST">
+                                @csrf
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder ="" name="roomname">
+                                    <label for="floatingInput">Input Room Name</label>
+                                </div>
+                                <button class="btn btn-outline-primary w-100 m-2" type="submit" >Submit</button>
+                            </form>
                             <br><br><br>
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <h6 class="mb-0">Room List</h6>
@@ -93,15 +96,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>
-                                                <button type="button" class="btn btn-outline-warning m-2">Edit</button>
-                                                <button type="button" class="btn btn-outline-danger m-2">Delete</button>
-                                            </td>
-                                        </tr>
+                                        @foreach ($room as $r)
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>{{ $r -> id }}</td>
+                                                <td>{{ $r -> roomname }}</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-outline-warning m-2">Edit</button>
+                                                    <a href="/roomname/hapus/{{ $r->id }}" class="btn btn-outline-danger m-2" type="button">Delete</a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
