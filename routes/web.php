@@ -20,7 +20,10 @@ Route::get('/adminshowdata', function () {return view('adminshowdata');});
 Route::get('/admineditroom', function () {return view('admineditroom');});
 Route::get('/admineditagency', function () {return view('admineditagency');});
 Route::get('/adminedituser', function () {return view('adminedituser');});
-Route::get('/operatorindex', function () {return view('operatorindex');});
+
+
+
+
 
 
 
