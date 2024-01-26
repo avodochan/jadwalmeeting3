@@ -19,8 +19,8 @@
               <li><a href="index-4.html">Home 4 - index-4.html</a></li>
             </ul>
           </li> --}}
-          <li><a class="nav-link scrollto" href="index.html" class="active">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="userHome" class="active">Home</a></li>
+          <li><a class="nav-link scrollto" href="service">Services</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
           {{-- <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li> --}}
           {{-- <li><a class="nav-link scrollto" href="index.html#team">Team</a></li> --}}

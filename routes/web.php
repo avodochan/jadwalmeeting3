@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserhomeController;
+use App\Http\Controllers\ServiceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,8 +26,16 @@ Route::get('/', function () {
     return view('userHome');
 });
 
+#dashboard/home user
+Route::get('/userHome', [App\Http\Controllers\UserhomeController::class, 'userHome'])->name('userHome');
+
+#service
+Route::get('/service', [App\Http\Controllers\ServiceController::class, 'service'])->name('service');
+
+#halaman jadwal rapat
 Route::get('/jadwalRapat', [App\Http\Controllers\UserhomeController::class, 'jadwalRapat'])->name('jadwalRapat');
 Route::get('/buatRapat', [App\Http\Controllers\UserhomeController::class, 'buatRapat'])->name('buatRapat');
+Route::get('/arsipRapat', [App\Http\Controllers\UserhomeController::class, 'arsipRapat'])->name('arsipRapat');
 
 Auth::routes();
 
