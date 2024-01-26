@@ -38,7 +38,9 @@
               <div class="icon">
                 <i class="bi bi-broadcast"></i>
               </div>
+              
               <a href="buatRapat" class="stretched-link">
+
                 <h3>Buat Rapat</h3>
               </a>
               <p>Buat jadwal rapat anda disini. </p>
