@@ -68,114 +68,67 @@
             <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
-                    
-                        {{-- show model --}}
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light text-center rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Show Meeting Model</h6>
-                                </div>
-                                {{-- tabel --}}
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Model ID</th>
-                                                <th scope="col">Model Name</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>0</td>
-                                                <td>Online</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>1</td>
-                                                <td>Offline</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                    {{--  --}}
+                <div class="col-sm-12 col-xl-12">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Edit User Data</h6>
                             </div>
-                        </div>
-                    
-                        {{-- show category --}}
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light text-center rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Show Meeting Category</h6>
-                                </div>
-                                {{-- tabel --}}
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Category ID</th>
-                                                <th scope="col">Category Name</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>0</td>
-                                                <td>Internal</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>1</td>
-                                                <td>External</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" placeholder ="">
+                                <label for="floatingInput">Username</label>
                             </div>
-                        </div>
-                
-                        {{-- show room --}}
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light text-center rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Show Meeting Room (Offline Model Only)</h6>
-                                </div>
-                                {{-- table --}}
-                                {{-- <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Room ID</th>
-                                                <th scope="col">Room Name</th>
-                                                <th scope="col">Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>0</td>
-                                                <td>Internal</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-outline-warning m-2">Edit</button>
-                                                    <button type="button" class="btn btn-outline-danger m-2">Delete</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div> --}}
+                            {{--  --}}
+                            <div class="form-floating mb-3">
+                                <div class="row g-2">
+                                    <div class="col-md">
+                                      <div class="form-floating">
+                                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com" disabled>
+                                        <label for="floatingInputGrid">Recent Positions</label>
+                                      </div>
+                                    </div>
+                                    <div class="col-md">
+                                      <div class="form-floating">
+                                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                          <option selected>Positions</option>
+                                          <option value="1">Guru Kejuruan</option>
+                                          <option value="2">Guru Mata Pelajaran Umum</option>
+                                          <option value="3">Teknisi</option>
+                                          <option value="4">Administrasi</option>
+                                          <option value="3">Kurikulum</option>
+                                          <option value="3">Kepala Sekolah</option>
+                                          <option value="3">Kesiswaan</option>
+                                        </select>
+                                        <label for="floatingSelectGrid">New Positions</label>
+                                      </div>
+                                    </div>
+                                  </div>
                             </div>
-                        </div>
-                    
-                        {{-- show agency --}}
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light text-center rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Show Agency (External Category)</h6>
-                                </div>
+                            {{--  --}}
+                            <div class="form-floating mb-3">
+                                <div class="row g-2">
+                                    <div class="col-md">
+                                      <div class="form-floating">
+                                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com" disabled>
+                                        <label for="floatingInputGrid">Recent Access</label>
+                                      </div>
+                                    </div>
+                                    <div class="col-md">
+                                      <div class="form-floating">
+                                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                          <option selected>Access</option>
+                                          <option value="admin">Admin</option>
+                                          <option value="operator">Operator</option>
+                                          <option value="user">User</option>
+                                        </select>
+                                        <label for="floatingSelectGrid">New Access</label>
+                                      </div>
+                                    </div>
+                                  </div>
                             </div>
+                            <button class="btn btn-outline-primary w-100 m-2" type="button">Submit</button>
                         </div>
+                    </div>
                     
                         {{-- show user --}}
                         <div class="col-sm-12 col-xl-12">

@@ -18,6 +18,15 @@ Route::get('/', function () {return view('welcome');});
 Route::get('/adminindex', function () {return view('adminindex');});
 Route::get('/admininputdata', function () {return view('admininputdata');});
 Route::get('/adminshowdata', function () {return view('adminshowdata');});
+Route::get('/admineditroom', function () {return view('admineditroom');});
+Route::get('/admineditagency', function () {return view('admineditagency');});
+Route::get('/adminedituser', function () {return view('adminedituser');});
+
+
+
+
+
+
 
 
 // returns the home page with all posts
