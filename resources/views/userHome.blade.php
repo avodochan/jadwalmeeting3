@@ -12,7 +12,7 @@
         <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
       </div> --}}
     {{-- </div> --}}
-  {{-- </section> --}} 
+  {{-- </section> --}}
   <section id="hero" class="hero carousel  carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
     <div class="carousel-inner">
@@ -110,7 +110,7 @@
               <div class="icon">
                 <i class="bi bi-broadcast"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="buatRapat" class="stretched-link">
                 <h3>Buat Rapat</h3>
               </a>
               <p>Buat jadwal rapat anda disini. </p>
@@ -127,14 +127,14 @@
               <div class="icon">
                 <i class="bi bi-easel"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="arsipRapat" class="stretched-link">
                 <h3>Arsip Rapat</h3>
               </a>
               <p>Fitur yang menampilkan arsipan dari rapat</p>
             </div>
           </div>
         </div><!-- End Service Item -->
-{{-- 
+{{--
         <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
           <div class="service-item">
             <div class="img">
