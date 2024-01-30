@@ -36,29 +36,34 @@
         
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
-            <nav class="navbar bg-light navbar-light">
-                <a href="{{asset ('assets/admintm')}}/index.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>MeetUp</h3>
-                </a>
-                <div class="d-flex align-items-center ms-4 mb-4">
-                    <div class="position-relative">
-                        <img class="rounded-circle" src="{{asset ('assets/admintm')}}/img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
-                    </div>
-                    <div class="ms-3">
-                        <h6 class="mb-0">Jhon Doe</h6>
-                        <span>Admin</span>
-                    </div>
-                </div>
-                <div class="navbar-nav w-100">
-                    <a href="adminindex" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <div class="nav-item dropdown">
-                    </div>
-                    <a href="admininputdata" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Input Data</a>
-                    <a href="adminshowdata" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>Show Data</a>
-                </div>
-            </nav>
-        </div>
+          <nav class="navbar bg-light navbar-light">
+              <a href="{{asset ('assets/admintm')}}/index.html" class="navbar-brand mx-4 mb-3">
+                  <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>MeetUp</h3>
+              </a>
+              <div class="d-flex align-items-center ms-4 mb-4">
+                  <div class="position-relative">
+                      <img class="rounded-circle" src="{{asset ('assets/admintm')}}/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                      <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                  </div>
+                  <div class="ms-3">
+                      <h6 class="mb-0">Jhon Doe</h6>
+                      <span>Admin</span>
+                  </div>
+              </div>
+              <div class="navbar-nav w-100">
+                  <a href="adminindex" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i> Dashboard</a>
+                  
+                  <div class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i> Master Data</a>
+                      <div class="dropdown-menu bg-transparent border-0" data-bs-popper="none">
+                          <a href="admininputdata" class="nav-item nav-link"><i class="bi bi-plus-square-fill"></i> Input Data</a>
+                          <a href="adminshowdata" class="nav-item nav-link"><i class="bi bi-eye-fill"></i> Show Data</a>
+                      </div>
+                  </div>
+                  
+              </div>
+          </nav>
+      </div>
         <!-- Sidebar End -->
         <!-- Content Start -->
         <div class="content">
@@ -78,30 +83,43 @@
                                 <input type="text" class="form-control" placeholder ="">
                                 <label for="floatingInput">Username</label>
                             </div>
+                            
                             {{--  --}}
                             <div class="form-floating mb-3">
                                 <div class="row g-2">
+                                  <div class="col-sm-12 col-xl-6">
+                                    <div class="form-floating">
+                                      <input type="text" class="form-control" placeholder ="">
+                                      <label for="floatingInput">NIP (Diedit Jika Ada Kesalahan atau Menambahkan)</label>
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="col-sm-12 col-xl-6">
+                                    <div class="form-floating">
+                                      <input type="text" class="form-control" placeholder ="">
+                                      <label for="floatingInput">Nama</label>
+                                    </div>
+                                  </div>
+                                  
                                     <div class="col-md">
                                       <div class="form-floating">
                                         <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com" disabled>
-                                        <label for="floatingInputGrid">Recent Positions</label>
+                                        <label for="floatingInputGrid">Jabatan Sebelumnya</label>
                                       </div>
                                     </div>
+                                    
                                     <div class="col-md">
                                       <div class="form-floating">
                                         <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                                          <option selected>Positions</option>
-                                          <option value="1">Guru Kejuruan</option>
-                                          <option value="2">Guru Mata Pelajaran Umum</option>
-                                          <option value="3">Teknisi</option>
-                                          <option value="4">Administrasi</option>
-                                          <option value="3">Kurikulum</option>
-                                          <option value="3">Kepala Sekolah</option>
-                                          <option value="3">Kesiswaan</option>
+                                          <option selected disabled></option>
+                                          <option value="1">Kepala Sekolah</option>
+                                          <option value="2">Staff</option>
+                                          <option value="3">Guru</option>
                                         </select>
-                                        <label for="floatingSelectGrid">New Positions</label>
+                                        <label for="floatingSelectGrid">Jabatan Baru</label>
                                       </div>
                                     </div>
+                                    
                                   </div>
                             </div>
                             {{--  --}}
@@ -110,22 +128,25 @@
                                     <div class="col-md">
                                       <div class="form-floating">
                                         <input type="text" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com" disabled>
-                                        <label for="floatingInputGrid">Recent Access</label>
+                                        <label for="floatingInputGrid">Hak Akses Sebelumnya</label>
                                       </div>
                                     </div>
                                     <div class="col-md">
                                       <div class="form-floating">
                                         <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                                          <option selected>Access</option>
+                                          <option selected disabled></option>
                                           <option value="admin">Admin</option>
-                                          <option value="operator">Operator</option>
                                           <option value="user">User</option>
                                         </select>
-                                        <label for="floatingSelectGrid">New Access</label>
+                                        <label for="floatingSelectGrid">Hak Akses Baru</label>
                                       </div>
                                     </div>
                                   </div>
                             </div>
+                            <div class="input-group mb-3">
+                              <label class="input-group-text" for="inputGroupFile01">Foto</label>
+                              <input type="file" class="form-control" id="inputGroupFile01">
+                          </div>
                             <button class="btn btn-outline-primary w-100 m-2" type="button">Submit</button>
                         </div>
                     </div>
@@ -134,21 +155,21 @@
                         <div class="col-sm-12 col-xl-12">
                             <div class="bg-light text-center rounded p-4">
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Show User</h6>
+                                    <h6 class="mb-0">User</h6>
                                 </div>
                                 {{-- card --}}
                                 <div class="row">
                                     <div class="col-sm-6 col-xl-3">
                                       <div class="card">
                                         <div class="card-header text-muted">
-                                            User ID/NIP :
+                                            User ID/Email :
                                         </div>
                                         <div class="card-body">
                                             <img src="..." class="card-img-top" alt="...">
                                               <p class="card-text" style="text-align: left">
-                                                Name :<br>
-                                                Position :<br>
-                                                Access :
+                                                NIP :<br>
+                                                Nama :<br>
+                                                Jabatan :
                                               </p>
                                           <button type="button" class="btn btn-outline-warning w-100 m-2">Edit</button>
                                           <button type="button" class="btn btn-outline-danger w-100 m-2">Delete</button>                                    
@@ -159,14 +180,14 @@
                                     <div class="col-sm-6 col-xl-3">
                                         <div class="card">
                                           <div class="card-header text-muted">
-                                              User ID/NIP :
+                                              User ID/Email :
                                           </div>
                                           <div class="card-body">
                                               <img src="..." class="card-img-top" alt="...">
                                                 <p class="card-text" style="text-align: left">
-                                                  Name :<br>
-                                                  Position :<br>
-                                                  Access :
+                                                  NIP :<br>
+                                                  Nama :<br>
+                                                  Jabatan :
                                                 </p>
                                             <button type="button" class="btn btn-outline-warning w-100 m-2">Edit</button>
                                             <button type="button" class="btn btn-outline-danger w-100 m-2">Delete</button>                                    
@@ -192,7 +213,7 @@
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                            Designed By MeetUp Team</a>
                         </div>
                     </div>
                 </div>

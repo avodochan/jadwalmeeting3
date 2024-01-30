@@ -26,6 +26,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -52,10 +53,15 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="adminindex" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    
                     <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle show" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i> Master Data</a>
+                        <div class="dropdown-menu bg-transparent border-0 show">
+                            <a href="admininputdata" class="nav-item nav-link active"><i class="bi bi-plus-square-fill"></i> Input Data</a>
+                            <a href="adminshowdata" class="nav-item nav-link"><i class="bi bi-eye-fill"></i> Show Data</a>
+                        </div>
                     </div>
-                    <a href="admininputdata" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>Input Data</a>
-                    <a href="adminshowdata" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Show Data</a>
+                    
                 </div>
             </nav>
         </div>
@@ -68,11 +74,72 @@
             <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
+                    
+                <div class="col-sm-12 col-xl-12">
+                    <div class="bg-light text-center rounded p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h6 class="mb-0">Menambahkan User</h6>
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                            <div class="form-floating form-floating-group flex-grow-1">
+                                <input type="text" class="rounded-0 rounded-start form-control" name="code1" placeholder ="">
+                                <label for="floatingInput">Email (ID)</label>
+                            </div>
+                            <span class="input-group-text">@gmail.com</span>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-sm-12 col-xl-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder ="">
+                                    <label for="floatingInput">NIP (Kecuali Honorer)</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-xl-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" placeholder ="">
+                                    <label for="floatingInput">Nama</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-xl-6">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                        <option selected disabled></option>
+                                        <option value="1">Kepala Sekolah</option>
+                                        <option value="2">Staff</option>
+                                        <option value="3">Guru</option>
+                                    </select>
+                                    <label for="floatingSelectGrid">Jabatan</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-xl-6">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                        <option selected disabled></option>
+                                        <option value="1">Admin</option>
+                                        <option value="2">User</option>
+                                    </select>
+                                    <label for="floatingSelectGrid">Hak Akses</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupFile01">Foto</label>
+                            <input type="file" class="form-control" id="inputGroupFile01">
+                        </div>
+                          
+                        <button class="btn btn-outline-primary w-100 m-2" type="button">Submit</button>
+                    </div>
+                </div>
+                <br><br><br>
+                    
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Add New Meeting Room (Offline Model Only)</h6>
+                                <h6 class="mb-0">Menambahkan Ruang Meeting (Hanya Meeting Model Offline)</h6>
                             </div>
+
                             <form action="/roomname" method="POST">
                                 @csrf
                                 <div class="form-floating mb-3">
@@ -110,76 +177,50 @@
                                     </tbody>
                                 </table>
                             </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" placeholder ="">
+                                <label for="floatingInput">Nama Ruangan</label>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="form-floating form-floating-group flex-grow-1">
+                                    <input type="text" class="rounded-0 rounded-start form-control" name="code1" placeholder ="">
+                                    <label for="floatingInput">Kapasitas</label>
+                                </div>
+                                <span class="input-group-text">orang</span>
+                            </div>
+                            
+                            <button class="btn btn-outline-primary w-100 m-2" type="button">Submit</button>
+                            <br><br><br>
+
                         </div>
                     </div>
+                    
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Add Agency (Already Made an Appointment)</h6>
+                                <h6 class="mb-0">Menambahkan Instansi (Sudah Membuat Janji)</h6>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" placeholder ="">
-                                <label for="floatingInput">Input Agency Name</label>
+                                <label for="floatingInput">Nama Instansi</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" placeholder ="">
-                                <label for="floatingInput">Address</label>
+                                <label for="floatingInput">Alamat</label>
                             </div>
                             <button class="btn btn-outline-primary w-100 m-2" type="button">Submit</button>
                             <br><br><br>
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Exsisting Agency</h6>
-                            </div>
-                            <input class="form-control border-0" type="search" placeholder="Search"><br>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                  <div class="card">
-                                    <div class="card-header text-muted">
-                                        Agency ID :
-                                    </div>
-                                    <div class="card-body">
-                                      <h5 class="card-title">PT.rugi dong</h5>
-                                      <p class="card-text">Jl.rugi dong no 999</p>
-                                      <button type="button" class="btn btn-outline-warning w-100 m-2">Edit</button>
-                                      <button type="button" class="btn btn-outline-danger w-100 m-2">Delete</button>                                    
-                                    </div>
-                                  </div>
-                                </div>
-                                
-                                <div class="col-sm-6">
-                                  <div class="card">
-                                    <div class="card-header text-muted">
-                                        Agency ID :
-                                    </div>
-                                    <div class="card-body">
-                                      <h5 class="card-title">PT.yang bener aja</h5>
-                                      <p class="card-text">Jl. yang bener aja no 990</p>
-                                      <button type="button" class="btn btn-outline-warning w-100 m-2">Edit</button>
-                                      <button type="button" class="btn btn-outline-danger w-100 m-2">Delete</button>
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
                     </div>
                 </div>
             </div>
+            </div>
+            
             <!-- Blank End -->
 
 
             <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">MeetUp</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('adminfooter')
             <!-- Footer End -->
         </div>
         <!-- Content End -->
