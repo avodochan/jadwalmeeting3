@@ -52,11 +52,16 @@
                         </div>
                     </div>
                     <div class="navbar-nav w-100">
-                        <a href="adminindex" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                        <a href="adminindex" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i> Dashboard</a>
+                        
                         <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i> Master Data</a>
+                            <div class="dropdown-menu bg-transparent border-0" data-bs-popper="none">
+                                <a href="admininputdata" class="nav-item nav-link"><i class="bi bi-plus-square-fill"></i> Input Data</a>
+                                <a href="adminshowdata" class="nav-item nav-link"><i class="bi bi-eye-fill"></i> Show Data</a>
+                            </div>
                         </div>
-                        <a href="admininputdata" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Input Data</a>
-                        <a href="adminshowdata" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Show Data</a>
+                        
                     </div>
                 </nav>
             </div>
@@ -159,11 +164,11 @@
                     <div class="col-sm-12 col-md-6 col-xl-4">
                         <div class="h-100 bg-light rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Active Meeting</h6>
+                                <h6 class="mb-0">Pengajuan Meeting</h6>
                             </div>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-outline-primary w-100 m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    Meeting 1
+                                    Meeting Request 1
                                 </button>
                                 
                                 <!-- Modal -->
@@ -171,15 +176,18 @@
                                     <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Pengajuan Meeting</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                        ...
+                                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                                
+                                                
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Tolak</button>
+                                        <button type="button" class="btn btn-outline-success">Terima</button>
                                         </div>
                                     </div>
                                     </div>
@@ -252,20 +260,19 @@
              <div class="container-fluid pt-4 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Meeting History</h6>
+                        <h6 class="mb-0">Arsip Meeting Terbaru</h6>
+                        <a href="">Show All</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr class="text-dark">
                                     <th scope="col">#</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Invoice</th>
+                                    <th scope="col">Tanggal</th>
+                                    <th scope="col">Nama Meeting</th>
                                     <th scope="col">Host</th>
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Model</th>
-                                    <th scope="col">Category</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Jumlah Peserta</th>
+                                    <th scope="col">Detail</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -275,9 +282,7 @@
                                     <td>INV-0123</td>
                                     <td>Jhon Doe</td>
                                     <td>Lorem Ipsum</td>
-                                    <td>Online</td>
-                                    <td>Internal</td>
-                                    <td><button type="button" class="btn btn-outline-primary w-100 m-2">Edit</button></td>
+                                    <td><button type="button" class="btn btn-outline-primary w-100 m-2">Detail</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -288,21 +293,7 @@
 
 
             <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">MeetUp</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </br>
-                        Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('adminfooter')
             <!-- Footer End -->
         </div>
         <!-- Content End -->

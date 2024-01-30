@@ -51,11 +51,16 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="adminindex" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="adminindex" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i> Dashboard</a>
+                    
                     <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle show" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i> Master Data</a>
+                        <div class="dropdown-menu bg-transparent border-0 show">
+                            <a href="admininputdata" class="nav-item nav-link "><i class="bi bi-plus-square-fill"></i> Input Data</a>
+                            <a href="adminshowdata" class="nav-item nav-link active"><i class="bi bi-eye-fill"></i> Show Data</a>
+                        </div>
                     </div>
-                    <a href="admininputdata" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Input Data</a>
-                    <a href="adminshowdata" class="nav-item nav-link active"><i class="fa fa-table me-2"></i>Show Data</a>
+                    
                 </div>
             </nav>
         </div>
@@ -68,12 +73,13 @@
             <!-- Blank Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
+                    {{--  --}}
                     
                         {{-- show model --}}
                         <div class="col-sm-12 col-xl-6">
                             <div class="bg-light text-center rounded p-4">
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Show Meeting Model</h6>
+                                    <h6 class="mb-0">Meeting Model</h6>
                                 </div>
                                 {{-- tabel --}}
                                 <div class="table-responsive">
@@ -82,7 +88,7 @@
                                             <tr>
                                                 <th scope="col">#</th>
                                                 <th scope="col">Model ID</th>
-                                                <th scope="col">Model Name</th>
+                                                <th scope="col">Model</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -106,7 +112,7 @@
                         <div class="col-sm-12 col-xl-6">
                             <div class="bg-light text-center rounded p-4">
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Show Meeting Category</h6>
+                                    <h6 class="mb-0">Kategori Meeting</h6>
                                 </div>
                                 {{-- tabel --}}
                                 <div class="table-responsive">
@@ -114,8 +120,8 @@
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Category ID</th>
-                                                <th scope="col">Category Name</th>
+                                                <th scope="col">Kategori ID</th>
+                                                <th scope="col">Kategori</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -139,24 +145,26 @@
                         <div class="col-sm-12 col-xl-6">
                             <div class="bg-light text-center rounded p-4">
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Show Meeting Room (Offline Model Only)</h6>
+                                    <h6 class="mb-0">Ruang Meeting (Hanya Meeting Model Offline)</h6>
                                 </div>
                                 {{-- table --}}
-                                {{-- <div class="table-responsive">
+                                <div class="table-responsive">
                                     <table class="table">
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Room ID</th>
-                                                <th scope="col">Room Name</th>
-                                                <th scope="col">Actions</th>
+                                                <th scope="col">ID Ruangan</th>
+                                                <th scope="col">Ruangan</th>
+                                                <th scope="col">Kapasitas (orang)</th>
+                                                <th scope="col">Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td>0</td>
-                                                <td>Internal</td>
+                                                <td>John</td>
+                                                <td>Doe</td>
+                                                <td>Doe</td>
                                                 <td>
                                                     <button type="button" class="btn btn-outline-warning m-2">Edit</button>
                                                     <button type="button" class="btn btn-outline-danger m-2">Delete</button>
@@ -164,7 +172,7 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div> --}}
+                                </div>
                             </div>
                         </div>
                     
@@ -172,7 +180,32 @@
                         <div class="col-sm-12 col-xl-6">
                             <div class="bg-light text-center rounded p-4">
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Show Agency (External Category)</h6>
+                                    <h6 class="mb-0">Instansi Tersedia</h6>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">ID Instansi</th>
+                                                <th scope="col">Instansi</th>
+                                                <th scope="col">Alamat</th>
+                                                <th scope="col">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>John</td>
+                                                <td>Doe</td>
+                                                <td>Doe</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-outline-warning m-2">Edit</button>
+                                                    <button type="button" class="btn btn-outline-danger m-2">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -181,21 +214,21 @@
                         <div class="col-sm-12 col-xl-12">
                             <div class="bg-light text-center rounded p-4">
                                 <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Show User</h6>
+                                    <h6 class="mb-0">User</h6>
                                 </div>
                                 {{-- card --}}
                                 <div class="row">
                                     <div class="col-sm-6 col-xl-3">
                                       <div class="card">
                                         <div class="card-header text-muted">
-                                            User ID/NIP :
+                                            User ID/Email :
                                         </div>
                                         <div class="card-body">
                                             <img src="..." class="card-img-top" alt="...">
                                               <p class="card-text" style="text-align: left">
-                                                Name :<br>
-                                                Position :<br>
-                                                Access :
+                                                NIP :<br>
+                                                Nama :<br>
+                                                Jabatan :
                                               </p>
                                           <button type="button" class="btn btn-outline-warning w-100 m-2">Edit</button>
                                           <button type="button" class="btn btn-outline-danger w-100 m-2">Delete</button>                                    
@@ -206,14 +239,14 @@
                                     <div class="col-sm-6 col-xl-3">
                                         <div class="card">
                                           <div class="card-header text-muted">
-                                              User ID/NIP :
+                                              User ID/Email :
                                           </div>
                                           <div class="card-body">
                                               <img src="..." class="card-img-top" alt="...">
                                                 <p class="card-text" style="text-align: left">
-                                                  Name :<br>
-                                                  Position :<br>
-                                                  Access :
+                                                  NIP :<br>
+                                                  Nama :<br>
+                                                  Jabatan :
                                                 </p>
                                             <button type="button" class="btn btn-outline-warning w-100 m-2">Edit</button>
                                             <button type="button" class="btn btn-outline-danger w-100 m-2">Delete</button>                                    
@@ -231,19 +264,7 @@
 
 
             <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">MeetUp</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('adminfooter')
             <!-- Footer End -->
         </div>
         <!-- Content End -->
