@@ -21,6 +21,7 @@ Route::get('/admineditruangan', function () {return view('admineditruangan');});
 Route::get('/admineditinstansi', function () {return view('admineditinstansi');});
 Route::get('/adminedituser', function () {return view('adminedituser');});
 Route::get('/admindetailmeeting', function () {return view('admindetailmeeting');});
+Route::get('/adminbuatmeeting', function () {return view('adminbuatmeeting');});
 
 
 
