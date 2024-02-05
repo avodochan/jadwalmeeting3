@@ -72,7 +72,7 @@
 
 
             <!-- Blank Start -->
-            <form action="/admininputdata" method="POST">
+            <form action="" method="post">
                 @csrf
                 <div class="container-fluid pt-4 px-4">
                     <div class="row g-4">

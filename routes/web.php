@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\InputData;
+use App\Http\Controllers\ShowData;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,11 +27,9 @@ Route::get('/adminbuatmeeting', function () {return view('adminbuatmeeting');});
 
 
 
+Route::get('/admininputdata', [InputData::class, 'tambah']);
+Route::post('/admininputdata', [InputData::class, 'store']);
 
-
-
-
-
-
+Route::get('/adminshowdata', [ShowData::class, 'index']);
 
 

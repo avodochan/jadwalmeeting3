@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('nip');
             $table->enum('jabatan', ['Kepala Sekolah', 'Staff', 'Guru']);
             $table->string('nama');
-            $table->enum('hak akses', ['Admin', 'User']);
+            $table->enum('hak_akses', ['Admin', 'User']);
             $table->text('foto');
             $table->timestamps();
         });

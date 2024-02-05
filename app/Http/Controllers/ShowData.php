@@ -2,17 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tuser;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class InputData extends Controller
+class ShowData extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        
+        // mengambil data dari table pegawai
+    	$tuser = Tuser::all();
+
+    	// mengirim data pegawai ke view index
+    	return view('adminshowdata',['tuser' => $tuser]);
     }
 
     /**
@@ -23,29 +27,12 @@ class InputData extends Controller
         //
     }
 
-    public function tambah()
-    {
-    
-        // memanggil view tambah
-        return view('admininputdata');
-    
-    }
-
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        DB::table('tambah_user')->insert([
-            'email' => $request->email,
-            'nip' => $request->nip,
-            'jabatan' => $request->jabatan,
-            'nama' => $request->nama,
-            'hak_akses' => $request->hak_akses,
-            'foto' => $request->foto
-        ]);
-        // alihkan halaman ke halaman pegawai
-        return redirect('/admininputdata');
+        //
     }
 
     /**

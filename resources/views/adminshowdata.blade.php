@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -33,17 +33,20 @@
 
 <body>
     <div class="container-xxl position-relative bg-white d-flex p-0">
-        
+
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="{{asset ('assets/admintm')}}/index.html" class="navbar-brand mx-4 mb-3">
+                <a href="{{ asset('assets/admintm') }}/index.html" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>MeetUp</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="{{asset ('assets/admintm')}}/img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                        <img class="rounded-circle" src="{{ asset('assets/admintm') }}/img/user.jpg" alt=""
+                            style="width: 40px; height: 40px;">
+                        <div
+                            class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1">
+                        </div>
                     </div>
                     <div class="ms-3">
                         <h6 class="mb-0">Jhon Doe</h6>
@@ -51,16 +54,20 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="adminindex" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i> Dashboard</a>
-                    
+                    <a href="adminindex" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>
+                        Dashboard</a>
+
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle show" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i> Master Data</a>
+                        <a href="#" class="nav-link dropdown-toggle show" data-bs-toggle="dropdown"><i
+                                class="fa fa-table me-2"></i> Master Data</a>
                         <div class="dropdown-menu bg-transparent border-0 show">
-                            <a href="admininputdata" class="nav-item nav-link "><i class="bi bi-plus-square-fill"></i> Input Data</a>
-                            <a href="adminshowdata" class="nav-item nav-link active"><i class="bi bi-eye-fill"></i> Show Data</a>
+                            <a href="admininputdata" class="nav-item nav-link "><i class="bi bi-plus-square-fill"></i>
+                                Input Data</a>
+                            <a href="adminshowdata" class="nav-item nav-link active"><i class="bi bi-eye-fill"></i> Show
+                                Data</a>
                         </div>
                     </div>
-                    
+
                 </div>
             </nav>
         </div>
@@ -74,191 +81,205 @@
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
                     {{--  --}}
-                    
-                        {{-- show model --}}
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light text-center rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Meeting Model</h6>
-                                </div>
-                                {{-- tabel --}}
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Model ID</th>
-                                                <th scope="col">Model</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>0</td>
-                                                <td>Online</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>1</td>
-                                                <td>Offline</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+
+                    {{-- show model --}}
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Meeting Model</h6>
+                            </div>
+                            {{-- tabel --}}
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Model ID</th>
+                                            <th scope="col">Model</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>0</td>
+                                            <td>Online</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>1</td>
+                                            <td>Offline</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    
-                        {{-- show category --}}
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light text-center rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Kategori Meeting</h6>
-                                </div>
-                                {{-- tabel --}}
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Kategori ID</th>
-                                                <th scope="col">Kategori</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>0</td>
-                                                <td>Internal</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>1</td>
-                                                <td>External</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                    </div>
+
+                    {{-- show category --}}
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Kategori Meeting</h6>
+                            </div>
+                            {{-- tabel --}}
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Kategori ID</th>
+                                            <th scope="col">Kategori</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>0</td>
+                                            <td>Internal</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>1</td>
+                                            <td>External</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                
-                        {{-- show room --}}
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light text-center rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Ruang Meeting (Hanya Meeting Model Offline)</h6>
-                                </div>
-                                {{-- table --}}
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">ID Ruangan</th>
-                                                <th scope="col">Ruangan</th>
-                                                <th scope="col">Kapasitas (orang)</th>
-                                                <th scope="col">Aksi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>John</td>
-                                                <td>Doe</td>
-                                                <td>Doe</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-outline-warning m-2">Edit</button>
-                                                    <button type="button" class="btn btn-outline-danger m-2">Delete</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                    </div>
+
+                    {{-- show room --}}
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Ruang Meeting (Hanya Meeting Model Offline)</h6>
+                            </div>
+                            {{-- table --}}
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">ID Ruangan</th>
+                                            <th scope="col">Ruangan</th>
+                                            <th scope="col">Kapasitas (orang)</th>
+                                            <th scope="col">Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>Doe</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-warning m-2">Edit</button>
+                                                <button type="button"
+                                                    class="btn btn-outline-danger m-2">Delete</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    
-                        {{-- show agency --}}
-                        <div class="col-sm-12 col-xl-6">
-                            <div class="bg-light text-center rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">Instansi Tersedia</h6>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">ID Instansi</th>
-                                                <th scope="col">Instansi</th>
-                                                <th scope="col">Alamat</th>
-                                                <th scope="col">Aksi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>John</td>
-                                                <td>Doe</td>
-                                                <td>Doe</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-outline-warning m-2">Edit</button>
-                                                    <button type="button" class="btn btn-outline-danger m-2">Delete</button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                    </div>
+
+                    {{-- show agency --}}
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Instansi Tersedia</h6>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">ID Instansi</th>
+                                            <th scope="col">Instansi</th>
+                                            <th scope="col">Alamat</th>
+                                            <th scope="col">Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>Doe</td>
+                                            <td>
+                                                <button type="button"
+                                                    class="btn btn-outline-warning m-2">Edit</button>
+                                                <button type="button"
+                                                    class="btn btn-outline-danger m-2">Delete</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    
-                        {{-- show user --}}
-                        <div class="col-sm-12 col-xl-12">
-                            <div class="bg-light text-center rounded p-4">
-                                <div class="d-flex align-items-center justify-content-between mb-4">
-                                    <h6 class="mb-0">User</h6>
-                                </div>
-                                {{-- card --}}
-                                <div class="row">
+                    </div>
+
+                    {{-- show user --}}
+                    <div class="col-sm-12 col-xl-12">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">User</h6>
+                            </div>
+                            {{-- card --}}
+                            <div class="row">
+                                @foreach ($tuser as $u)
                                     <div class="col-sm-6 col-xl-3">
-                                      <div class="card">
+                                        <div class="card">
+                                            <div class="card-header text-muted">
+                                                User ID/Email : {{ $u->email }}
+                                            </div>
+                                            <div class="card-body">
+                                                @if (!empty($u->foto))
+                                                <img src="{{ asset('fotoguru/' . $u->foto) }}" class="card-img-top" alt="User Image">
+                                                @else
+                                                    <!-- If 'foto' column is empty, you can display a placeholder image -->
+                                                    <img src="{{ asset('fotoguru/') }}" class="card-img-top" alt="User Image">
+                                                @endif
+                                                <p class="card-text" style="text-align: left">
+                                                    NIP : {{ $u->nip }}<br>
+                                                    Nama : {{ $u->nama }}<br>
+                                                    Jabatan : {{ $u->jabatan }}
+                                                </p>
+                                                <button type="button"
+                                                    class="btn btn-outline-warning w-100 m-2">Edit</button>
+                                                <button type="button"
+                                                    class="btn btn-outline-danger w-100 m-2">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                                <div class="col-sm-6 col-xl-3">
+                                    <div class="card">
                                         <div class="card-header text-muted">
                                             User ID/Email :
                                         </div>
                                         <div class="card-body">
                                             <img src="..." class="card-img-top" alt="...">
-                                              <p class="card-text" style="text-align: left">
+                                            <p class="card-text" style="text-align: left">
                                                 NIP :<br>
                                                 Nama :<br>
                                                 Jabatan :
-                                              </p>
-                                          <button type="button" class="btn btn-outline-warning w-100 m-2">Edit</button>
-                                          <button type="button" class="btn btn-outline-danger w-100 m-2">Delete</button>                                    
+                                            </p>
+                                            <button type="button"
+                                                class="btn btn-outline-warning w-100 m-2">Edit</button>
+                                            <button type="button"
+                                                class="btn btn-outline-danger w-100 m-2">Delete</button>
                                         </div>
-                                      </div>
                                     </div>
-                                    
-                                    <div class="col-sm-6 col-xl-3">
-                                        <div class="card">
-                                          <div class="card-header text-muted">
-                                              User ID/Email :
-                                          </div>
-                                          <div class="card-body">
-                                              <img src="..." class="card-img-top" alt="...">
-                                                <p class="card-text" style="text-align: left">
-                                                  NIP :<br>
-                                                  Nama :<br>
-                                                  Jabatan :
-                                                </p>
-                                            <button type="button" class="btn btn-outline-warning w-100 m-2">Edit</button>
-                                            <button type="button" class="btn btn-outline-danger w-100 m-2">Delete</button>                                    
-                                          </div>
-                                        </div>
-                                      </div>
-                                  </div>
-                            </div>
+                                </div>
                             </div>
                         </div>
-                
-                
+                    </div>
+                </div>
+
+
             </div>
             <!-- Blank End -->
 
